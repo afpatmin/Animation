@@ -17,17 +17,17 @@ class ElementAnimation extends Animation {
   /**
    * These are our target properties where we should end up in if all goes well.
    */
-  Map<String, Object> toProperties = {};
+  Map<String, dynamic> toProperties = {};
 
   /**
    * A map of properties that represent the initial state of the element (beginning values).
    */
-  final Map<String, Object> fromProperties = {};
+  final Map<String, dynamic> fromProperties = {};
 
   /**
    * This map stores the current properties our element has during the process of animation. These change all the time.
    */
-  final Map<String, Object> currentProperties = {};
+  final Map<String, dynamic> currentProperties = {};
 
   /**
    * We need to keep track of what units are being used for properties (e.g. width could be px or em).
@@ -185,9 +185,9 @@ class ElementAnimation extends Animation {
 
       // Clamp.
       if (percentage > 100) {
-        percentage = 100;
+        percentage = 100.0;
       } else if (percentage < 0) {
-        percentage = 0;
+        percentage = 0.0;
       }
 
       _onStepController.add({

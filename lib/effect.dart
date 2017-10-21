@@ -8,21 +8,16 @@
 
 library effect;
 
-import 'dart:html';
-import 'dart:math';
-import 'dart:isolate';
-import 'dart:async';
-import 'dart:collection';
-
+import 'dart:html' as dom;
 import 'animation.dart';
 
 part 'src/effect/slide.dart';
 
-Element _createWrapper(Element element) {
+dom.Element _createWrapper(dom.Element element) {
   // Return parent if already wrapped.
   if (element.parent != null && element.parent.classes.contains('animation-effect-wrapper')) return element.parent;
 
-  var wrapper = new DivElement()
+  var wrapper = new dom.DivElement()
     ..classes.add('animation-effect-wrapper');
 
   wrapper.style

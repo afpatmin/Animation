@@ -8,7 +8,7 @@
 
 part of effect;
 
-Animation slideOut(Element element, {String direction: 'right', duration: 1000, Easing easing}) {
+Animation slideOut(dom.Element element, {String direction: 'right', duration: 1000, Easing easing}) {
   var wrapper = _createWrapper(element);
   wrapper.style
     ..overflow = 'hidden'
@@ -19,7 +19,7 @@ Animation slideOut(Element element, {String direction: 'right', duration: 1000, 
   return animate(element, properties: {'left': element.clientWidth});
 }
 
-Animation slideIn(Element element, {String direction: 'right', duration: 1000, Easing easing}) {
+Animation slideIn(dom.Element element, {String direction: 'right', duration: 1000, Easing easing}) {
   var wrapper = _createWrapper(element);
   wrapper.style
     ..overflow = 'hidden'
@@ -32,11 +32,11 @@ Animation slideIn(Element element, {String direction: 'right', duration: 1000, E
   return animate(element, properties: {'left': 0});
 }
 
-Animation fadeOut(Element element, {duration: 500, Easing easing}) {
+Animation fadeOut(dom.Element element, {duration: 500, Easing easing}) {
   return animate(element, properties: {'opacity': 0}, duration: duration, easing: easing);
 }
 
-Animation fadeIn(Element element, {duration: 500, Easing easing}) {
+Animation fadeIn(dom.Element element, {duration: 500, Easing easing}) {
   element.style.opacity = '0';
   return animate(element, properties: {'opacity': 1}, duration: duration, easing: easing);
 }
