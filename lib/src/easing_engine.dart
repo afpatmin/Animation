@@ -164,21 +164,21 @@ class EasingEngine {
    * Performs a sine easy-in.
    */
   static num easeInSine(num time, num duration, num change, num baseValue) {
-    return -change * cos(time / duration * (PI / 2)) + change + baseValue;
+    return -change * cos(time / duration * (pi / 2)) + change + baseValue;
   }
 
   /**
    * Performs a sine easy-out.
    */
   static num easeOutSine(num time, num duration, num change, num baseValue) {
-    return change * sin(time / duration * (PI / 2)) + baseValue;
+    return change * sin(time / duration * (pi / 2)) + baseValue;
   }
 
   /**
    * Performs a sine easy-in-out.
    */
   static num easeInOutSine(num time, num duration, num change, num baseValue) {
-    return -change / 2 * (cos(time / duration * PI) - 1) + baseValue;
+    return -change / 2 * (cos(time / duration * pi) - 1) + baseValue;
   }
 
   // EXPONENTIAL
